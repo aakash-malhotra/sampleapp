@@ -1,1 +1,35 @@
-<p>server-db-form works!</p>
+<div class="container">
+
+    <form (ngSubmit)="processForm()">
+        <div class="from group">
+            <input type="text" name="sno" class="form.control" [(ngModel)]="server.sno">
+        </div>
+
+        <div class="from group">
+            <label for="server"> server </label>
+            <input type="text" name="server" class="form.control" [(ngModel)]="server.server">
+        </div>
+        <div class="from group">
+            <label for="server_instance"> server_instance </label>
+            <input type="text" name="server_instance" class="form.control" [(ngModel)]="server.server_instance">
+        </div>
+        <div class="from group">
+            <label for="environment"> environment </label>
+            <input type="text" name="environment" class="form.control" [(ngModel)]="server.environment">
+        </div>
+        <div class="from group">
+            <label for="port"> port </label>
+            <input type="text" name="port" class="form.control" [(ngModel)]="server.port">
+        </div>
+        <div class="from group">
+            <label for="status"> status </label>
+            <input type="text" name="status" class="form.control" [(ngModel)]="server.status">
+        </div>
+        <div class="from group">
+            <label for="report"> report </label>
+            <input type="text" name="report" class="form.control" [(ngModel)]="server.report">
+        </div>
+
+        <input type="submit" value="save" class="btn btn-success">
+    </form>
+</div>
