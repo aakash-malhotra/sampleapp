@@ -13,7 +13,7 @@ import { error } from 'protractor';
   styleUrls: ['./server-db-form.component.css']
 })
 export class ServerDbFormComponent implements OnInit {
-private server:ServerDb
+public server:ServerDb
   constructor(private _serverDbService:ServerDbService, private _router: Router) { }
 
   ngOnInit(): void {

@@ -11,6 +11,7 @@ import {Router} from '@angular/router';
 export class ListserverComponent implements OnInit {
 
   public servers:any;
+  public server:any;
   constructor(private _serverDbService:ServerDbService, private _router:Router) { }
 
   ngOnInit() {
@@ -21,14 +22,14 @@ export class ListserverComponent implements OnInit {
      console.log(error);
    });
   }
-  deleteserver(server){
+  deleteServer(server){
     this._serverDbService.deleteServer(server.sno).subscribe((data)=>{
       this.servers.splice(this.servers.indexOf(server), 1);
     },(error)=>{
       console.log(error);
     });
   }
-  updateserver(server){
+  updateServer(server){
     this._serverDbService.setter(server);
     this._router.navigate(['/op']);
   }
@@ -37,6 +38,7 @@ export class ListserverComponent implements OnInit {
     this._serverDbService.setter(server);
     this._router.navigate(['/op']);
   }
+
 }
 
 

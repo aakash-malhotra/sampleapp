@@ -17,23 +17,23 @@ export class ServerDbService {
   constructor(private _http:Http) { }
 
   getServers(){
-    return this._http.get(this.baseUrl+'/servers', this.options).map((response)=>response.json).catch(this.errorHandler);
+    return this._http.get(this.baseUrl+'/servers', this.options).map((response)=>response.json()).catch(this.errorHandler);
   }
 
   getServer(sno:Number){
-    return this._http.get(this.baseUrl+'/server'+sno, this.options).map((response)=>response.json).catch(this.errorHandler);
+    return this._http.get(this.baseUrl+'/server'+sno, this.options).map((response)=>response.json()).catch(this.errorHandler);
   }
 
   deleteServer(sno:Number){
-    return this._http.delete(this.baseUrl+'/server'+sno, this.options).map((response)=>response.json).catch(this.errorHandler);
+    return this._http.delete(this.baseUrl+'/server'+sno, this.options).map((response)=>response.json()).catch(this.errorHandler);
   }
 
   createServer(_ServerDb:ServerDb){
-    return this._http.post(this.baseUrl+'/server', JSON.stringify(ServerDb), this.options).map((response)=>response.json).catch(this.errorHandler);
+    return this._http.post(this.baseUrl+'/server', JSON.stringify(ServerDb), this.options).map((response)=>response.json()).catch(this.errorHandler);
   }
 
   updateServer(_ServerDb:ServerDb){
-    return this._http.put(this.baseUrl+'/server', JSON.stringify(ServerDb), this.options).map((response)=>response.json).catch(this.errorHandler);
+    return this._http.put(this.baseUrl+'/server', JSON.stringify(ServerDb), this.options).map((response)=>response.json()).catch(this.errorHandler);
   }
 
   errorHandler(error:Response){

@@ -26,7 +26,8 @@ const appRoutes:Routes=[
     BrowserModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [ServerDbService],
   bootstrap: [AppComponent]
