@@ -24,14 +24,14 @@
                     <td> {{serverDb.port}}</td>
                     <td> {{serverDb.status}}</td>
                     <td> {{serverDb.remarks}}</td>
-                    <td> <button class="btn btn-danger" (click) = "deleteServer(server)"> Delete </button>
+                    <td> <button class="btn btn-danger" (click) = "deleteServer(serverDb.sno)"> Delete </button>
                         <button class="btn btn-primary" (click)="updateServer(servers)"> Edit </button></td>
                 </tr>
             </tbody>
         </table>
         <button class="btn btn-primary" (click)="newserver()"> Add Server </button><br>
         <tbody>
-            <input type="number" class="getserver" name="sno">
+            <input type="number" class="getserver" [(ngModel)]=sno>
             <button type="submit" (click)="getServer(sno)"> Get Server </button>
             <p> number is {{sno}} </p> 
         </tbody>

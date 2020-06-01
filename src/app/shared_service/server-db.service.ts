@@ -25,7 +25,7 @@ export class ServerDbService {
   }
 
   deleteServer(sno:Number){
-    return this._http.delete(this.baseUrl+'/server'+sno, this.options).map((response)=>response.json()).catch(this.errorHandler);
+    return this._http.delete(this.baseUrl+'/deleteServer/'+sno, this.options).map((response)=>response.json()).catch(this.errorHandler);
   }
 
   createServer(_ServerDb:ServerDb){
