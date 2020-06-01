@@ -14,11 +14,16 @@ import { error } from 'protractor';
 })
 export class ServerDbFormComponent implements OnInit {
 public server:ServerDb
+public sno:any;
   constructor(private _serverDbService:ServerDbService, private _router: Router) { }
 
   ngOnInit(): void {
     this.server=this._serverDbService.getter()
   }
+
+  //getServer():void{
+    //this.sno=this._serverDbService.getServer(1)
+  //}
 
   processForm(){
     if(this.server.sno==undefined){

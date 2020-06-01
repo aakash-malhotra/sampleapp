@@ -12,6 +12,7 @@ export class ListserverComponent implements OnInit {
 
   public servers:any;
   public server:any;
+  public sno:any;
   constructor(private _serverDbService:ServerDbService, private _router:Router) { }
 
   ngOnInit() {
@@ -22,6 +23,17 @@ export class ListserverComponent implements OnInit {
      console.log(error);
    });
   }
+
+  getServer(sno) {
+    console.log(sno);
+    this._serverDbService.getServer(sno).subscribe((data:any[])=>{
+      console.log(sno);
+    },(error)=>{
+      console.log(sno);
+      console.log(error);
+    });
+   }
+
   deleteServer(server){
     this._serverDbService.deleteServer(server.sno).subscribe((data)=>{
       this.servers.splice(this.servers.indexOf(server), 1);
