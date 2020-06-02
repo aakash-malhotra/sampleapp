@@ -35,14 +35,12 @@ public sno:any;
         this._router.navigate(['/']);
 
       });
-    }else
-    {
-        this._serverDbService.updateServer().subscribe((data:any[])=>{
-          console.log(data);
-        },(error)=>{
-          console.log(error);
-        });
-      }
-    
+    }else{
+      this._serverDbService.updateServer().subscribe((data:any[])=>{
+        console.log(data);
+      },(error)=>{
+        console.log(error);
+      });
+    }
   }
 }
