@@ -32,8 +32,8 @@ export class ServerDbService {
     return this._http.post(this.baseUrl+'/server', JSON.stringify(ServerDb), this.options).map((response)=>response.json()).catch(this.errorHandler);
   }
 
-  updateServer(_ServerDb:ServerDb){
-    return this._http.put(this.baseUrl+'/server', JSON.stringify(ServerDb), this.options).map((response)=>response.json()).catch(this.errorHandler);
+  updateServer(){
+    return this._http.put(this.baseUrl+'/modify', JSON.stringify(ServerDb), this.options).map((response)=>response.json()).catch(this.errorHandler);
   }
 
   errorHandler(error:Response){

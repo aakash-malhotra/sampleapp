@@ -41,8 +41,8 @@ export class ListserverComponent implements OnInit {
       console.log(error);
     });
   }
-  updateServer(sno){
-    this._serverDbService.setter(sno);
+  updateServer(server){
+    this._serverDbService.setter(server);
     this._router.navigate(['/op']);
   }
   newserver(){

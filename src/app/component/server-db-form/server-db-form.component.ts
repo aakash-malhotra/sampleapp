@@ -37,8 +37,8 @@ public sno:any;
       });
     }else
     {
-        this._serverDbService.updateServer(this.server).subscribe((server)=>{
-          console.log(server);
+        this._serverDbService.updateServer().subscribe((data:any[])=>{
+          console.log(data);
         },(error)=>{
           console.log(error);
         });
